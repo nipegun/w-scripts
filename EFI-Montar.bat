@@ -1,2 +1,0 @@
-mountvol z: /s
-
