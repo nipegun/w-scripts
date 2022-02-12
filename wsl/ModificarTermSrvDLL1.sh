@@ -30,19 +30,20 @@ cp /mnt/c/Windows/System32/termsrv.dll /mnt/c/Datos/EscritorioRemoto/termsrv.dll
 echo ""
 echo "  Creando el archivo por lotes ..."
 echo ""
-echo 'echo ""'                                                                                 > /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
+echo "@echo off"                                                                               > /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
+echo "echo."                                                                                  >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
 echo 'echo "  Tomando propiedad del archivo termsrv.dll"'                                     >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
-echo 'echo ""'                                                                                >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
+echo "echo."                                                                                  >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
 echo "takeown /F c:\Windows\System32\termsrv.dll /A"                                          >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
 echo ""                                                                                       >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
-echo 'echo ""'                                                                                >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
+echo "echo."                                                                                  >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
 echo 'echo "  Concediendo permisos de control total del archivo al grupo administradores..."' >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
-echo 'echo ""'                                                                                >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
+echo "echo."                                                                                  >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
 echo "icacls c:\Windows\System32\termsrv.dll /grant Administradores:F"                        >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
 echo ""                                                                                       >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
-echo 'echo ""'                                                                                >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
+echo "echo."                                                                                  >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
 echo 'echo "  Parando el servicio de escritorio remoto..."'                                   >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
-echo 'echo ""'                                                                                >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
+echo "echo."                                                                                  >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
 echo "net stop TermService"                                                                   >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
 
 echo ""
