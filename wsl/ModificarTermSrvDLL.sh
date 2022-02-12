@@ -5,12 +5,12 @@
 # Si se te llena la boca hablando de libertad entonces hazlo realmente libre.
 # No tienes que aceptar ningún tipo de términos de uso o licencia para utilizarlo o modificarlo porque va sin CopyLeft.
 
-#-------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------
 #  Script de NiPeGun para modificar la librería de conexión a escritorio remoto de Windows
 #
 #  Ejecución remota:
-#  curl -s x | bash
-#-------------------------------------------------------------------------------------------
+#  curl -s https://raw.githubusercontent.com/nipegun/w-scripts/main/wsl/ModificarTermSrvDLL.sh | bash
+#------------------------------------------------------------------------------------------------------
 
 vCadenaCorrecta=B80001000089813806000090
 vPrincipioDeCadenaABuscar=39813C0600000F84
