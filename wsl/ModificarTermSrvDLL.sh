@@ -33,8 +33,8 @@ echo ""
 echo 'echo ""'                                                                                 > /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
 echo 'echo "  Tomando propiedad del archivo termsrv.dll"'                                     >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
 echo 'echo ""'                                                                                >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
-echo 'echo "takeown /F c:\Windows\System32\termsrv.dll /A"'                                   >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
-echo 'echo ""'                                                                                >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
+echo "takeown /F c:\Windows\System32\termsrv.dll /A"                                          >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
+echo ""                                                                                       >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
 echo 'echo ""'                                                                                >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
 echo 'echo "  Concediendo permisos de control total del archivo al grupo administradores..."' >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
 echo 'echo ""'                                                                                >> /mnt/c/Datos/EscritorioRemoto/PrepararParaModificar.bat
