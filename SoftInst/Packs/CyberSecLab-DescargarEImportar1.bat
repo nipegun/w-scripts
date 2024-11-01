@@ -54,3 +54,33 @@
          cd "VirtualBox VMs\kali\"
          curl -L http://hacks4geeks.com/_/descargas/MVs/Discos/Packs/CyberSecLab/kali.vmdk -o kali.vmdk
          "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "kali" --storagectl "VirtIO" --port 0 --device 0 --type hdd --medium kali.vmdk
+
+:: Crear máquina virtual de sift
+   echo Creando máquina virtual de sift...
+   "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" createvm --name "sift" --ostype "Ubuntu_64" --register
+   "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "sift" --firmware efi
+   :: Procesador
+     "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "sift" --cpus 4
+   :: RAM
+     "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "sift" --memory 4096
+   :: Gráfica
+     "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "sift" --graphicscontroller vmsvga --vram 128 --accelerate3d on
+   :: Red
+     "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "sift" --nictype1 virtio
+     "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "sift" --nic1 intnet --intnet1 "redintlan"
+   :: Almacenamiento
+      :: CD
+         "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "sift" --name "SATA Controller" --add sata --controller IntelAhci --portcount 1
+           "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "sift" --storagectl "SATA Controller" --port 0 --device 0 --type dvddrive --medium emptydrive
+      :: Disco duro
+         "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "sift" --name "VirtIO" --add "VirtIO" --bootable on --portcount 1
+         cd "VirtualBox VMs\sift\"
+         curl -L http://hacks4geeks.com/_/descargas/MVs/Discos/Packs/CyberSecLab/sift.vmdk -o sift.vmdk
+         "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "sift" --storagectl "VirtIO" --port 0 --device 0 --type hdd --medium sift.vmdk
+
+:: Agrupar máquinas virtuales
+   echo Agrupando máquinas virtuales...
+   "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"  modifyvm "openwrt" --groups "/CyberSecLab"
+   "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"  modifyvm "kali"    --groups "/CyberSecLab"
+   "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"  modifyvm "sift"    --groups "/CyberSecLab"
+   "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"  modifyvm "pruebas" --groups "/CyberSecLab"
