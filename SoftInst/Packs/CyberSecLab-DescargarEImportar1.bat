@@ -1,8 +1,8 @@
 :: Ejecución remota desde CMD.exe
 ::   curl -sL https://raw.githubusercontent.com/nipegun/w-scripts/refs/heads/main/SoftInst/Packs/CyberSecLab-DescargarEImportar.bat | cmd
 
-
 @echo off
+
 :: Crear máquina virtual de OpenWrt
    echo Creando máquina virtual de OpenWrt...
    "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" createvm --name "openwrtlab" --ostype "Linux_64" --register
