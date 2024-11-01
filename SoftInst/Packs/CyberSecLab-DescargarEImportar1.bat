@@ -44,7 +44,7 @@
      "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "kali" --graphicscontroller vmsvga --vram 128 --accelerate3d on
    :: Red
      "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "kali" --nictype1 virtio
-     "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "kali" --nic2 intnet --intnet1 "redintlan"
+     "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "kali" --nic1 intnet --intnet1 "redintlan"
    :: Almacenamiento
       :: CD
          "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "kali" --name "SATA Controller" --add sata --controller IntelAhci --portcount 1
