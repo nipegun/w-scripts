@@ -40,6 +40,9 @@
          cd "VirtualBox VMs\openwrtlab\"
          :: curl -L http://hacks4geeks.com/_/descargas/MVs/Discos/Packs/CyberSecLab/openwrtlab.vmdk -o openwrtlab.vmdk
          :: "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "openwrtlab" --storagectl "VirtIO" --port 0 --device 0 --type hdd --medium openwrtlab.vmdk
+   :: Volver a la carpeta de usuario
+      cd ..
+      cd ..
 
 :: Crear máquina virtual de Kali
    echo Creando máquina virtual de Kali...
@@ -63,6 +66,9 @@
          cd "VirtualBox VMs\kali\"
          curl -L http://hacks4geeks.com/_/descargas/MVs/Discos/Packs/CyberSecLab/kali.vmdk -o kali.vmdk
          "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "kali" --storagectl "VirtIO" --port 0 --device 0 --type hdd --medium kali.vmdk
+   :: Volver a la carpeta de usuario
+      cd ..
+      cd ..
 
 :: Crear máquina virtual de sift
    echo Creando máquina virtual de sift...
@@ -86,10 +92,13 @@
          cd "VirtualBox VMs\sift\"
          curl -L http://hacks4geeks.com/_/descargas/MVs/Discos/Packs/CyberSecLab/sift.vmdk -o sift.vmdk
          "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "sift" --storagectl "VirtIO" --port 0 --device 0 --type hdd --medium sift.vmdk
+   :: Volver a la carpeta de usuario
+      cd ..
+      cd ..
 
 :: Agrupar máquinas virtuales
    echo Agrupando máquinas virtuales...
-   "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"  modifyvm "openwrt" --groups "/CyberSecLab"
+   :: "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"  modifyvm "openwrt" --groups "/CyberSecLab"
    "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"  modifyvm "kali"    --groups "/CyberSecLab"
    "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"  modifyvm "sift"    --groups "/CyberSecLab"
-   "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"  modifyvm "pruebas" --groups "/CyberSecLab"
+   :: "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"  modifyvm "pruebas" --groups "/CyberSecLab"
