@@ -1,6 +1,8 @@
 :: Ejecución remota desde CMD.exe
-::   curl -sL 
+::   curl -sL https://raw.githubusercontent.com/nipegun/w-scripts/refs/heads/main/SoftInst/Packs/CyberSecLab-DescargarEImportar.bat | cmd
 
+
+@echo off
 :: Crear máquina virtual de OpenWrt
    echo Creando máquina virtual de OpenWrt...
    "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" createvm --name "openwrtlab" --ostype "Linux_64" --register
@@ -27,8 +29,8 @@
       :: Disco duro
          "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "openwrtlab" --name "VirtIO" --add scsi
          cd "VirtualBox VMs\openwrtlab\"
-         curl -L http://hacks4geeks.com/_/descargas/MVs/Discos/Packs/CyberSecLab/openwrtlab.vmdk -o openwrtlab.vmdk
-         "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "openwrtlab" --storagectl "VirtIO" --port 0 --device 0 --type hdd --medium openwrtlab.vmdk
+         :: curl -L http://hacks4geeks.com/_/descargas/MVs/Discos/Packs/CyberSecLab/openwrtlab.vmdk -o openwrtlab.vmdk
+         :: "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "openwrtlab" --storagectl "VirtIO" --port 0 --device 0 --type hdd --medium openwrtlab.vmdk
 
 :: Crear máquina virtual de Kali
    echo Creando máquina virtual de Kali...
@@ -50,5 +52,5 @@
       :: Disco duro
          "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "kali" --name "VirtIO" --add scsi
          cd "VirtualBox VMs\kali\"
-         curl -L http://hacks4geeks.com/_/descargas/MVs/Discos/Packs/CyberSecLab/kali.vmdk -o kali.vmdk
-         "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "kali" --storagectl "VirtIO" --port 0 --device 0 --type hdd --medium kali.vmdk
+         :: curl -L http://hacks4geeks.com/_/descargas/MVs/Discos/Packs/CyberSecLab/kali.vmdk -o kali.vmdk
+         :: "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "kali" --storagectl "VirtIO" --port 0 --device 0 --type hdd --medium kali.vmdk
