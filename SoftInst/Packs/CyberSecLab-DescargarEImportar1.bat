@@ -50,7 +50,7 @@
          "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "kali" --name "SATA Controller" --add sata --controller IntelAhci --portcount 1
            "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "kali" --storagectl "SATA Controller" --port 0 --device 0 --type dvddrive --medium emptydrive
       :: Disco duro
-         "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "openwrtlab" --name "VirtIO" --add "VirtIO" --bootable on --portcount 1
+         "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "kali" --name "VirtIO" --add "VirtIO" --bootable on --portcount 1
          cd "VirtualBox VMs\kali\"
          curl -L http://hacks4geeks.com/_/descargas/MVs/Discos/Packs/CyberSecLab/kali.vmdk -o kali.vmdk
          "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "kali" --storagectl "VirtIO" --port 0 --device 0 --type hdd --medium kali.vmdk
