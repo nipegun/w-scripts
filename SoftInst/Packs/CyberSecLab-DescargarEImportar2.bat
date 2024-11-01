@@ -98,7 +98,7 @@
 
 :: Agrupar máquinas virtuales
    echo Agrupando máquinas virtuales...
-   :: "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"  modifyvm "openwrt" --groups "/CyberSecLab"
-   "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"  modifyvm "kali"    --groups "/CyberSecLab"
-   "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"  modifyvm "sift"    --groups "/CyberSecLab"
-   :: "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"  modifyvm "pruebas" --groups "/CyberSecLab"
+:: "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"  modifyvm "openwrtlab" --groups "/CyberSecLab"
+   "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"  modifyvm "kali"       --groups "/CyberSecLab"
+   "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"  modifyvm "sift"       --groups "/CyberSecLab"
+:: "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"  modifyvm "pruebas"    --groups "/CyberSecLab"
