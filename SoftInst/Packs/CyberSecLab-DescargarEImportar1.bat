@@ -34,7 +34,7 @@
    :: Almacenamiento
       :: CD
          "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "openwrtlab" --name "SATA Controller" --add sata --controller IntelAhci --portcount 1
-           "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "openwrtlab" --storagectl "SATA Controller" --port 0 --device 0 --type dvddrive --medium emptydrive
+         "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "openwrtlab" --storagectl "SATA Controller" --port 0 --device 0 --type dvddrive --medium emptydrive
       :: Disco duro
          "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "openwrtlab" --name "VirtIO" --add "VirtIO" --bootable on --portcount 1
          cd "VirtualBox VMs\openwrtlab\"
@@ -60,7 +60,7 @@
    :: Almacenamiento
       :: CD
          "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "kali" --name "SATA Controller" --add sata --controller IntelAhci --portcount 1
-           "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "kali" --storagectl "SATA Controller" --port 0 --device 0 --type dvddrive --medium emptydrive
+         "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "kali" --storagectl "SATA Controller" --port 0 --device 0 --type dvddrive --medium emptydrive
       :: Disco duro
          "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "kali" --name "VirtIO" --add "VirtIO" --bootable on --portcount 1
          cd "VirtualBox VMs\kali\"
@@ -86,7 +86,7 @@
    :: Almacenamiento
       :: CD
          "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "sift" --name "SATA Controller" --add sata --controller IntelAhci --portcount 1
-           "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "sift" --storagectl "SATA Controller" --port 0 --device 0 --type dvddrive --medium emptydrive
+         "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "sift" --storagectl "SATA Controller" --port 0 --device 0 --type dvddrive --medium emptydrive
       :: Disco duro
          "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "sift" --name "VirtIO" --add "VirtIO" --bootable on --portcount 1
          cd "VirtualBox VMs\sift\"
@@ -112,7 +112,7 @@
    :: Almacenamiento
       :: CD
          "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "pruebas" --name "SATA Controller" --add sata --controller IntelAhci --portcount 1
-           "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "pruebas" --storagectl "SATA Controller" --port 0 --device 0 --type dvddrive --medium emptydrive
+         "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "pruebas" --storagectl "SATA Controller" --port 0 --device 0 --type dvddrive --medium emptydrive
       :: Disco duro
          "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "pruebas" --name "VirtIO" --add "VirtIO" --bootable on --portcount 1
          cd "VirtualBox VMs\pruebas\"
