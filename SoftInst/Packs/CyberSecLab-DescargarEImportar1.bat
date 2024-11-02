@@ -29,8 +29,10 @@
      "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "openwrtlab" --nic1 "NAT"
      "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "openwrtlab" --nictype2 virtio
      "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "openwrtlab" --nic2 intnet --intnet2 "redintlan"
+     "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "openwrtlab" --macaddress2 00aabbccd101
      "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "openwrtlab" --nictype3 virtio
      "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "openwrtlab" --nic3 intnet --intnet3 "redintlab"
+     "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "openwrtlab" --macaddress3 00aabbccd201
    :: Almacenamiento
       :: CD
          "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "openwrtlab" --name "SATA Controller" --add sata --controller IntelAhci --portcount 1
@@ -57,6 +59,7 @@
    :: Red
      "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "kali" --nictype1 virtio
      "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "kali" --nic1 intnet --intnet1 "redintlan"
+     "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "kali" --macaddress1 00aabbccd102
    :: Almacenamiento
       :: CD
          "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "kali" --name "SATA Controller" --add sata --controller IntelAhci --portcount 1
@@ -83,6 +86,7 @@
    :: Red
      "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "sift" --nictype1 virtio
      "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "sift" --nic1 intnet --intnet1 "redintlan"
+     "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "sift" --macaddress1 00aabbccd103
    :: Almacenamiento
       :: CD
          "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "sift" --name "SATA Controller" --add sata --controller IntelAhci --portcount 1
@@ -109,6 +113,7 @@
    :: Red
      "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "pruebas" --nictype1 virtio
      "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "pruebas" --nic1 intnet --intnet1 "redintlab"
+     "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "pruebas" --macaddress1 00aabbccd202
    :: Almacenamiento
       :: CD
          "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "pruebas" --name "SATA Controller" --add sata --controller IntelAhci --portcount 1
