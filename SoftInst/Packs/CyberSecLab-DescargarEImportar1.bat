@@ -12,7 +12,7 @@
 
 @echo off
 
-rem Crear máquina virtual de OpenWrt
+:: Crear máquina virtual de OpenWrt
    echo Creando máquina virtual de OpenWrt...
    "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" createvm --name "openwrtlab" --ostype "Linux_64" --register
    "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "openwrtlab" --firmware efi
