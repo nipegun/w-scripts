@@ -38,8 +38,8 @@
       :: Disco duro
          "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "openwrtlab" --name "VirtIO" --add "VirtIO" --bootable on --portcount 1
          cd "VirtualBox VMs\openwrtlab\"
-         :: curl -L http://hacks4geeks.com/_/descargas/MVs/Discos/Packs/CyberSecLab/openwrtlab.vmdk -o openwrtlab.vmdk
-         :: "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "openwrtlab" --storagectl "VirtIO" --port 0 --device 0 --type hdd --medium openwrtlab.vmdk
+         curl -L http://hacks4geeks.com/_/descargas/MVs/Discos/Packs/CyberSecLab/openwrtlab.vmdk -o openwrtlab.vmdk
+         "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "openwrtlab" --storagectl "VirtIO" --port 0 --device 0 --type hdd --medium openwrtlab.vmdk
    :: Volver a la carpeta de usuario
       cd ..
       cd ..
