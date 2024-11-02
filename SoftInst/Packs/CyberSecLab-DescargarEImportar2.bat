@@ -96,6 +96,32 @@
       cd ..
       cd ..
 
+:: Crear máquina virtual de pruebas
+   echo Creando máquina virtual de pruebas...
+   "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" createvm --name "pruebas" --ostype "Other_64" --register
+   "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "pruebas" --firmware efi
+   :: Procesador
+     "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "pruebas" --cpus 4
+   :: RAM
+     "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "pruebas" --memory 4096
+   :: Gráfica
+     "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "pruebas" --graphicscontroller vmsvga --vram 128 --accelerate3d on
+   :: Red
+     "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "pruebas" --nictype1 virtio
+     "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" modifyvm "pruebas" --nic1 intnet --intnet1 "redintlab"
+   :: Almacenamiento
+      :: CD
+         "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "pruebas" --name "SATA Controller" --add sata --controller IntelAhci --portcount 1
+           "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "pruebas" --storagectl "SATA Controller" --port 0 --device 0 --type dvddrive --medium emptydrive
+      :: Disco duro
+         "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storagectl "pruebas" --name "VirtIO" --add "VirtIO" --bootable on --portcount 1
+         cd "VirtualBox VMs\pruebas\"
+       ::  curl -L http://hacks4geeks.com/_/descargas/MVs/Discos/Packs/CyberSecLab/pruebas.vmdk -o pruebas.vmdk
+       ::  "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" storageattach "pruebas" --storagectl "VirtIO" --port 0 --device 0 --type hdd --medium pruebas.vmdk
+   :: Volver a la carpeta de usuario
+      cd ..
+      cd ..
+
 :: Agrupar máquinas virtuales
    echo Agrupando máquinas virtuales...
 :: "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"  modifyvm "openwrtlab" --groups "/CyberSecLab"
