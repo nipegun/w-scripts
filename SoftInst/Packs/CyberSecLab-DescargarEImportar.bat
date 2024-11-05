@@ -127,6 +127,8 @@
       cd ..
       cd ..
 
+
+
 :: Agrupar máquinas virtuales
    echo Agrupando máquinas virtuales...
    "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe"  modifyvm "openwrtlab" --groups "/CyberSecLab"
