@@ -1,0 +1,7 @@
+# Este script se llama desde EFI-Disco0-Montar.bat"
+
+select disk 0
+select partition 1
+assign letter=b
+exit
+
