@@ -7,7 +7,7 @@
 :: Script de NiPeGun para descargar e importar el pack CyberSecLab para VirtualBox en Windows
 ::
 :: Ejecución remota desde CMD.exe
-::   curl -sL https://raw.githubusercontent.com/nipegun/w-scripts/refs/heads/main/SoftInst/Packs/CyberSecLab-DescargarEImportar.bat | cmd
+::   curl -sL https://raw.githubusercontent.com/nipegun/w-scripts/refs/heads/main/InstDeSoftware/MVs/Packs/CyberSecLab-DescargarEImportar.bat | cmd
 :: ----------
 
 @echo off
