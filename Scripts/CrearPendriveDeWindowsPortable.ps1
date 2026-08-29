@@ -11,7 +11,8 @@
 # Ejecución remota en Debian:
 #   curl -sL https://raw.githubusercontent.com/nipegun/w-scripts/refs/heads/main/Scripts/CrearPendriveDeWindowsPortable.ps1 | bash
 # Ejecución remota en Windows:
-#   xxx https://raw.githubusercontent.com/nipegun/w-scripts/refs/heads/main/Scripts/CrearPendriveDeWindowsPortable.ps1 xxx
+#   # Ejecución remota en Windows desde PowerShell o CMD abiertos como administrador:
+#   powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "& ([ScriptBlock]::Create((Invoke-RestMethod -Uri 'https://raw.githubusercontent.com/nipegun/w-scripts/refs/heads/main/Scripts/CrearPendriveDeWindowsPortable.ps1'))) -ISO 'C:\ISOs\Windows11.iso'"
 # ----------
 
 [CmdletBinding()]
