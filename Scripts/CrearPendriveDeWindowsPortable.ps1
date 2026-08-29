@@ -1,4 +1,3 @@
-﻿#!/usr/bin/env pwsh
 
 # Pongo a disposición pública este script bajo el término de "software de dominio público".
 # Puedes hacer lo que quieras con él porque es libre de verdad; no libre con condiciones como las licencias GNU y otras patrañas similares.
@@ -8,10 +7,7 @@
 # ----------
 # Script de NiPeGun para preparar un Windows Portable a partir de un archivo .iso de instalacioón (requiere la versión Version 5.1 de PowerShell)
 #
-# Ejecución remota en Debian:
-#   curl -sL https://raw.githubusercontent.com/nipegun/w-scripts/refs/heads/main/Scripts/CrearPendriveDeWindowsPortable.ps1 | bash
-# Ejecución remota en Windows:
-#   # Ejecución remota en Windows desde PowerShell o CMD abiertos como administrador:
+# Ejecución remota en Windows desde PowerShell o CMD abiertos como administrador:
 #   powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "& ([ScriptBlock]::Create((Invoke-RestMethod -Uri 'https://raw.githubusercontent.com/nipegun/w-scripts/refs/heads/main/Scripts/CrearPendriveDeWindowsPortable.ps1'))) -ISO 'C:\ISOs\Windows11.iso'"
 # ----------
 
