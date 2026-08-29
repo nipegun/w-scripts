@@ -9,7 +9,7 @@
 # Script de NiPeGun para preparar un Windows Portable a partir de un archivo .iso de instalacioón (requiere la versión Version 5.1 de PowerShell)
 #
 # Ejecución remota:
-#   curl -sL https://raw.githubusercontent.com/nipegun/d-scripts/refs/heads/master/DScripts-Sincronizar.sh | bash
+#   curl -sL https://raw.githubusercontent.com/nipegun/w-scripts/refs/heads/main/Scripts/CrearPendriveDeWindowsPortable.ps1 | bash
 # ----------
 
 
