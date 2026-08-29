@@ -218,7 +218,7 @@ try {
   }
 
   Write-Host ''
-  Write-Host "Ediciones contenidas en $vRutaImagen:"
+  Write-Host ('Ediciones contenidas en {0}:' -f $vRutaImagen)
 
   for ($vIndice = 0; $vIndice -lt $aImagenes.Count; $vIndice++) {
     $vImagen = $aImagenes[$vIndice]
